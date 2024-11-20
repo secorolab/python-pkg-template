@@ -6,5 +6,10 @@ from platformdirs import user_cache_dir
 PKG_NAME = "python_pkg_tmpl"
 
 
-def get_pkg_cache_dir() -> str:
-    return join(user_cache_dir(), PKG_NAME)
+def get_pkg_cache_dir(subdir: str = PKG_NAME) -> str:
+    """!Returns a subdirectory under the user's cache directory
+
+    @param subdir subdirectory name
+    @return path to subdir in the user's cache directory
+    """
+    return join(user_cache_dir(), subdir)
