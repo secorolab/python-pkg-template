@@ -1,7 +1,6 @@
 site_name: Template Python Package
 site_description: 'A template Python Package for SECORO AG at Bremen University'
 site_author: 'SECOR AG'
-docs_dir: docs/
 repo_url: https://github.com/secorolab/python-pkg-template
 
 nav:
