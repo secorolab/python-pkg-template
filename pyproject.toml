@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "python_pkg_tmpl"
 version = "0.0.1"
 authors = [
-    { name="Minh Nguyen", email="minh.nguyen@uni-bremen.de" }
+    { name="SECORO AG", email="secoro@groups.uni-bremen.de" }
 ]
 description = """
 A template Python package.
