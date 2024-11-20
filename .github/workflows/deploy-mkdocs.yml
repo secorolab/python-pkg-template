@@ -14,7 +14,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          sudo apt-get install doxygen
+          apt install doxygen
+      - name: Check doxygen install
+        run: which doxygen
       - name: Deploy MkDocs
         uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
         env:
