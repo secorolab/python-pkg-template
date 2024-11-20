@@ -11,6 +11,7 @@ theme:
 plugins:
   - search
   - mkdoxy:
+      doxygen-bin-path: /usr/bin/doxygen
       projects:
         python_pkg_tmpl:
           src-dirs: src/python_pkg_tmpl
