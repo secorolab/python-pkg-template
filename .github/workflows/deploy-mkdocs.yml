@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          apt install doxygen
+          sudo python -m pip install --upgrade pip
+          sudo apt install doxygen
       - name: Check doxygen install
         run: which doxygen
       - name: Deploy MkDocs
