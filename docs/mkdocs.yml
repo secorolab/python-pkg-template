@@ -1,0 +1,21 @@
+site_name: Template Python Package
+site_description: 'A template Python Package for SECORO AG at Bremen University'
+site_author: 'SECOR AG'
+docs_dir: docs/
+repo_url: https://github.com/secorolab/python-pkg-template
+
+nav:
+    - Home: index.md
+theme:
+  name: 'material'
+
+plugins:
+  - search
+  - mkdoxy:
+      projects:
+        python_pkg_tmpl:
+          src-dirs: src/python_pkg_tmpl
+          full-doc: True
+          doxy-cfg:
+            FILE_PATTERNS: "*.py"
+            RECURSIVE: True
