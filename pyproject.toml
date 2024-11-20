@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "python_pkg_tmpl"
+version = "0.0.1"
+authors = [
+    { name="Minh Nguyen", email="minh.nguyen@uni-bremen.de" }
+]
+description = """
+A template Python package.
+"""
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+  "platformdirs",
+]
+[project.optional-dependencies]
+test = [
+  "pytest",
+]
+[project.urls]
+"Homepage" = "https://github.com/secorolab/python-pkg-template"
+
+[tool.ruff]
+line-length = 100
