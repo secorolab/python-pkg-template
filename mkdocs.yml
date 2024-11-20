@@ -1,20 +1,45 @@
 site_name: Template Python Package
 site_description: 'A template Python Package for SECORO AG at Bremen University'
-site_author: 'SECOR AG'
+site_author: 'SECORO AG'
 repo_url: https://github.com/secorolab/python-pkg-template
 
 nav:
-    - Home: index.md
+  - Home: index.md
+  - Python Package Template API:
+    - python-pkg-tmpl/index.md
+    - ... | python-pkg-tmpl/*.md
 theme:
   name: 'material'
+  #  logo: assets/logo.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
 
 plugins:
   - search
+  - awesome-pages
   - mkdoxy:
       projects:
-        python_pkg_tmpl:
+        python-pkg-tmpl:
           src-dirs: src/python_pkg_tmpl
           full-doc: True
           doxy-cfg:
             FILE_PATTERNS: "*.py"
             RECURSIVE: True
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/secorolab
+    - icon: material/web
+      link: https://www.uni-bremen.de/secoro
+
+copyright: Copyright &copy; 2024 SECORO Group
