@@ -33,6 +33,14 @@ Common installation patterns:
 
 Note: double quote is needed in `zsh` to avoid "no matches" error.
 
+## Linting
+
+The package uses [ruff](https://docs.astral.sh/ruff/) for linting,
+with both a [pre-commit hook](./.pre-commit-config.yaml)
+and a checking step in the [package build GitHub action](./.github/workflows/python-package.yml).
+Checks should use `ruff`'s [default rules](https://docs.astral.sh/ruff/rules/)
+except from line length (specified in [`pyproject.toml`](./pyproject.toml)).
+
 ## Python version in GitHub action
 
 The package should be built and tested with latest stable Python version,
