@@ -18,8 +18,7 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - name: Install dependencies
         run: |
-          sudo python -m pip install --upgrade pip
-          sudo apt install doxygen
-          sudo pip install -r docs/requirements.txt
+          python -m pip install --upgrade pip
+          python -m pip install ".[docs]"
       - name: Deploy MkDocs
         run: mkdocs gh-deploy --force
