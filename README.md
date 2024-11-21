@@ -31,7 +31,7 @@ Common installation patterns:
 - Install with optional dependencies (as specified in [`pyproject.toml`](./pyproject.toml),
   here `test`): `pip install ".[test]"`
 
-Note: double quote is needed in `zsh` to avoid "no matches" error.
+> **_NOTE:_** double quote is needed in `zsh` to avoid "no matches" error.
 
 ## Linting
 

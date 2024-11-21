@@ -1,0 +1,77 @@
+site_name: Template Python Package
+site_description: 'A template Python Package for SECORO AG at Bremen University'
+site_author: 'SECORO AG'
+repo_url: https://github.com/secorolab/python-pkg-template
+
+nav:
+  - Home: index.md
+  # defer to gen-files + literate-nav
+  - API reference: reference/
+theme:
+  name: 'material'
+  #  logo: assets/logo.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+plugins:
+  - search
+  - awesome-pages
+  - gen-files:
+      scripts:
+      - scripts/gen_api_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          # cross-ref to other projects
+          import:
+          - https://docs.python.org/3/objects.inv
+          paths: [src]
+          options:
+            # see full list of options at https://mkdocstrings.github.io/python/usage/
+            docstring_options:
+              ignore_init_summary: true
+            docstring_section_style: list
+            merge_init_into_class: true
+            separate_signature: true
+            heading_level: 1
+            summary: true
+
+extra_css:
+  - styles/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/secorolab
+    - icon: material/web
+      link: https://www.uni-bremen.de/secoro
+
+copyright: Copyright &copy; 2024 SECORO Group
