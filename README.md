@@ -40,6 +40,7 @@ with both a [pre-commit hook](./.pre-commit-config.yaml)
 and a checking step in the [package build GitHub action](./.github/workflows/python-package.yml).
 Checks should use `ruff`'s [default rules](https://docs.astral.sh/ruff/rules/)
 except from line length (specified in [`pyproject.toml`](./pyproject.toml)).
+A [plugin](https://github.com/astral-sh/ruff-vscode) is also available for VSCode.
 
 ## Python version in GitHub action
 
