@@ -14,14 +14,29 @@ theme:
   icon:
     repo: fontawesome/brands/github
   palette:
-    - scheme: slate
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/brightness-4
+        icon: material/brightness-auto
         name: Switch to light mode
-    - scheme: default
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 
 plugins:
   - search
@@ -34,6 +49,9 @@ plugins:
           doxy-cfg:
             FILE_PATTERNS: "*.py"
             RECURSIVE: True
+
+extra_css:
+  - styles/extra.css
 
 extra:
   social:
