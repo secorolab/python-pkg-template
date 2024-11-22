@@ -42,6 +42,16 @@ Checks should use `ruff`'s [default rules](https://docs.astral.sh/ruff/rules/)
 except from line length (specified in [`pyproject.toml`](./pyproject.toml)).
 A [plugin](https://github.com/astral-sh/ruff-vscode) is also available for VSCode.
 
+## API documentation generation
+
+API documentation is generated with [mkdocstrings](https://mkdocstrings.github.io/).
+Following the [recipe for Python](https://mkdocstrings.github.io/recipes/),
+the [`gen_api_pages.py` script](./scripts/gen_api_pages.py)
+is executed during `mkdocs` execution to generate Markdown pages for all source files.
+For the Python docstrings to be handled correctly by `mkdocstrings`, they must
+be either in Google, Numpy, or Sphinx style (see [docs](https://mkdocstrings.github.io/python/usage/configuration/docstrings/)).
+If not specified, the default style is [Google](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
+
 ## Python version in GitHub action
 
 The package should be built and tested with latest stable Python version,
