@@ -4,7 +4,7 @@ site_author: 'SECORO AG'
 repo_url: https://github.com/secorolab/python-pkg-template
 
 nav:
-  - Home: index.md
+  - Home: README.md
   # defer to gen-files + literate-nav
   - API reference: reference/
 theme:
